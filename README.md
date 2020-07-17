@@ -3,7 +3,7 @@ Library for Playstore updates forcefully
 
 ## Download
 
-### Add below code in (Project) build.gradle file
+### 1) Add below code in (Project) build.gradle file
 ~~~
 allprojects {
     repositories {
@@ -14,21 +14,21 @@ allprojects {
 }
 ~~~
 
-### Add below dependency in (Module) build.gradle
+### 2) Add below dependency in (Module) build.gradle
 ~~~
 implementation 'com.github.AutomatedTradingSoftTech:InAppUpdate:0.0.9'
 ~~~
 
 ## Configuration
 
-### Add below code in AndroidManifest.xml
+### 1) Add below code in AndroidManifest.xml
 ~~~
 <activity android:name="com.autotradetech.inappupdate.CheckPlaystoreUpdateActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"/>
 ~~~
 
-### Add below code in Style.xml
+### 2) Add below code in Style.xml
 ~~~
 <style name="Theme.Transparent"  parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
@@ -41,13 +41,13 @@ implementation 'com.github.AutomatedTradingSoftTech:InAppUpdate:0.0.9'
 ~~~
 
 
-### Add below code in your Activity to check update is available or not.
+### 3) Add below code in your Activity to check update is available or not.
 
 ~~~
 startActivityForResult(Intent(this, CheckPlaystoreUpdateActivity::class.java), 100)
 ~~~
 
-### Put below code in onActivityResult()
+### 4) Put below code in onActivityResult()
 ~~~
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
