@@ -17,7 +17,7 @@ allprojects {
 
 ### 2) Add below dependency in (Module) build.gradle
 ~~~
-implementation 'com.github.AutomatedTradingSoftTech:InAppUpdate:0.0.9'
+implementation 'com.github.AutomatedTradingSoftTech:InAppUpdate:0.0.10'
 ~~~
 
 ## Configuration
