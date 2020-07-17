@@ -2,7 +2,7 @@
 Library for Playstore updates forcefully.
 
 ## Download
-Retrofit requires at minimum Java 8+ or Android API 16+.
+InAppUpdate requires at minimum Java 8+ or Android API 16+.
 
 ### 1) Add below code in (Project) build.gradle file
 ~~~
