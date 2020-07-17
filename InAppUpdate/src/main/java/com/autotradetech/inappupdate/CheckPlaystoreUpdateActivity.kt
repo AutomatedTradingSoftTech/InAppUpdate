@@ -109,7 +109,6 @@ class CheckPlaystoreUpdateActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
 
-
                     // here check update again if update is fail
                     //if you want to request the update again just call checkUpdate()
                     //  handle update failure
