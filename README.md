@@ -41,14 +41,20 @@ implementation 'com.github.AutomatedTradingSoftTech:InAppUpdate:0.0.9'
 </style>
 ~~~
 
-
 ### 3) Add below code in your Activity to check update is available or not.
 
+### Kotlin Code
 ~~~
 startActivityForResult(Intent(this, CheckPlaystoreUpdateActivity::class.java), 100)
 ~~~
+### Java Code
+~~~
+startActivityForResult(new Intent(this, CheckPlaystoreUpdateActivity.class), 100);
+~~~
 
 ### 4) Put below code in onActivityResult()
+
+### Kotlin Code
 ~~~
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -73,6 +79,32 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
                     }
                     "" -> {
                     }
+                }
+            }
+        }
+}
+~~~
+### Java Code
+~~~
+@Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        
+        if(resultCode==Activity.RESULT_OK){
+            if(requestCode==100){
+                String result=data.getStringExtra("Result");
+                
+                if(result.toString().trim().equalsIgnoreCase("NoUpdate")){
+                    new LoadAllDataTask().execute("");
+                }
+                else if(result.toString().trim().equalsIgnoreCase("ResultOk")){
+
+                }
+                else if(result.toString().trim().equalsIgnoreCase("Canceled")){
+
+                }
+                else if(result.toString().trim().equalsIgnoreCase("CheckUpdateAgain")){
+                    startActivityForResult(new Intent(this, CheckPlaystoreUpdateActivity.class), 100);
                 }
             }
         }
