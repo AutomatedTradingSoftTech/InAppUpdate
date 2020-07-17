@@ -1,0 +1,3 @@
+include ':InAppUpdate'
+include ':app'
+rootProject.name = "In App Update"
