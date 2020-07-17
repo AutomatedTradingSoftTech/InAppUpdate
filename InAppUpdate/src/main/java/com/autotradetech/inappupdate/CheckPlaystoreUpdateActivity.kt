@@ -85,7 +85,6 @@ class CheckPlaystoreUpdateActivity : AppCompatActivity() {
 
                     Toast.makeText(this, "Ok", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "" + "Result Ok")
-                    //  handle user's approval }
 
                     val intentData = Intent()
                     intentData.putExtra("Result", "ResultOk")
@@ -95,7 +94,6 @@ class CheckPlaystoreUpdateActivity : AppCompatActivity() {
                 Activity.RESULT_CANCELED -> {
                     Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "" + "Result Cancelled")
-                    //  handle user's rejection  }
 
                     val intentData = Intent()
                     intentData.putExtra("Result", "Canceled")
@@ -108,11 +106,6 @@ class CheckPlaystoreUpdateActivity : AppCompatActivity() {
                         "Update fail, please wait",
                         Toast.LENGTH_SHORT
                     ).show()
-
-                    // here check update again if update is fail
-                    //if you want to request the update again just call checkUpdate()
-                    //  handle update failure
-
                     val intentData = Intent()
                     intentData.putExtra("Result", "CheckUpdateAgain")
                     setResult(Activity.RESULT_OK, intentData)

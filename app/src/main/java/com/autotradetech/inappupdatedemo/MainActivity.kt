@@ -22,7 +22,26 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == 100) {
-                Log.e(TAG, data!!.getStringExtra("Result") + " - ")
+                Log.e(TAG, data!!.getStringExtra("Result"))
+                when (data!!.getStringExtra("Result")) {
+                    "NoUpdate" -> {
+                        // if no update
+                        // perform your regular flow from here
+                    }
+                    "ResultOk" -> {
+                        //  handle user's approval
+                    }
+                    "Canceled" -> {
+                        //  handle user's rejection
+                    }
+                    "CheckUpdateAgain" -> {
+                        // here check update again if update is fail
+                        //if you want to request the update again just start CheckPlaystoreUpdateActivity again
+                    }
+                    "" -> {
+
+                    }
+                }
             }
         }
     }
