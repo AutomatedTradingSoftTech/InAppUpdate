@@ -1,6 +1,8 @@
 # InAppUpdate
 Library for Playstore updates forcefully
 
+### Download
+
 ## Add below code in (Project) build.gradle file
 ~~~
 allprojects {
