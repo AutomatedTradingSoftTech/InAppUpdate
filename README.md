@@ -1,9 +1,9 @@
-# InAppUpdate
+## InAppUpdate
 Library for Playstore updates forcefully
 
-### Download
+## Download
 
-## Add below code in (Project) build.gradle file
+### Add below code in (Project) build.gradle file
 ~~~
 allprojects {
     repositories {
@@ -14,19 +14,21 @@ allprojects {
 }
 ~~~
 
-## Add below dependency in (Module) build.gradle
+### Add below dependency in (Module) build.gradle
 ~~~
 implementation 'com.github.AutomatedTradingSoftTech:InAppUpdate:0.0.9'
 ~~~
 
-## Add below code in AndroidManifest.xml
+## Configuration
+
+### Add below code in AndroidManifest.xml
 ~~~
 <activity android:name="com.autotradetech.inappupdate.CheckPlaystoreUpdateActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"/>
 ~~~
 
-## Add below code in Style.xml
+### Add below code in Style.xml
 ~~~
 <style name="Theme.Transparent"  parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
@@ -39,13 +41,13 @@ implementation 'com.github.AutomatedTradingSoftTech:InAppUpdate:0.0.9'
 ~~~
 
 
-## Add below code in your Activity to check update is available or not.
+### Add below code in your Activity to check update is available or not.
 
 ~~~
 startActivityForResult(Intent(this, CheckPlaystoreUpdateActivity::class.java), 100)
 ~~~
 
-## Put below code in onActivityResult()
+### Put below code in onActivityResult()
 ~~~
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
