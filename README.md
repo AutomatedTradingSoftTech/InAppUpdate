@@ -1,7 +1,8 @@
 ## InAppUpdate
-Library for Playstore updates forcefully
+Library for Playstore updates forcefully.
 
 ## Download
+Retrofit requires at minimum Java 8+ or Android API 16+.
 
 ### 1) Add below code in (Project) build.gradle file
 ~~~
@@ -78,7 +79,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 }
 ~~~
 
-### Licence
+## Licence
 
 ~~~
 Copyright 2020 Automated Trading Soft Tech Pvt. Ltd.
